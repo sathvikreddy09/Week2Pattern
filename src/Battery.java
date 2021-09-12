@@ -1,4 +1,6 @@
 
 public interface Battery {
-	public Manufacture createNewBattery();
+	public abstract String size();
+	public abstract String voltage();
+	public abstract String backup();
 }

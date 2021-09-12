@@ -1,29 +1,36 @@
 
-public class Toy extends Manufacture {
+public class Toy implements Battery {
+	private String size;
+	private String voltage;
+	private String backup;
 
-
-    private String size;
-    private String volt;
-    private String hour;
-     
-    public Toy(String size, String volt, String hour){
-        this.size=size;
-        this.volt=volt;
-        this.hour=hour;
-    }
-    @Override
-    public String getSize() {
-        return this.size;
-    }
+	
+	public Toy(String size, String voltage, String backup) {
+		super();
+		this.size = size;
+		this.voltage = voltage;
+		this.backup = backup;
+	}
  
-    @Override
-    public String getVoltage() {
-        return this.volt;
-    }
+	@Override
+	public String size() {
+		return this.size;
+	}
  
-    @Override
-    public String getBackup() {
-        return this.hour;
-    }
+	@Override
+	public String voltage() {
+		return this.voltage;
+	}
+ 
+	@Override
+	public String backup() {
+		return this.backup;
+	}
+ 
+ 
+	@Override
+	public String toString() {
+		return "size :" + size + ", volts:" + voltage + ", hours :" + backup;
+	}
 
 }

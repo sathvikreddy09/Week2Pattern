@@ -1,19 +1,21 @@
 
-public class CarFactory implements Battery {
+public class CarFactory implements Manufacturer {
 
 	private String size;
-	private String volt;
-	private String hour;
+	private String voltage;
+	private String backup;
 	
-	public CarFactory(String size, String volt, String hour){
-		this.size=size;
-		this.volt=volt;
-		this.hour=hour;
+	
+	public CarFactory(String size, String voltage, String backup) {
+		super();
+		this.size = size;
+		this.voltage = voltage;
+		this.backup = backup;
 	}
-	
+
 	@Override
-	public Manufacture createNewBattery() {
-		return new Car(size,volt,hour);
+	public Battery createBattery() {
+		return new Car(size, voltage, backup);
 	}
 
 }
